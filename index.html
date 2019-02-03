@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery.js" charset="utf-8"></script>
+    <style>
+      * {
+        transition: all 0.3s ease;
+      }
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background-color: blue;
+
+      }
+      div {
+        position: absolute;
+        font-size: 48px;
+        top: 300px;
+        font-family: 'Futura', serif;
+      }
+
+    </style>
+<script type="text/javascript">
+  $(function() {
+    $("div").each(function(index) {
+      let x = Math.round(Math.random() * 1000) + 200
+      let r = Math.floor(Math.random() * 1000)
+      let g = Math.floor(Math.random() * 1000)
+      let b = Math.floor(Math.random() * 1000)
+      let color = [r, g, b].join()
+      $(this).css({
+        "left": x + "px",
+        "color": "rgb(" + color + ")"
+      })
+      $(this).on("mouseenter", function() {
+        let y = Math.round(Math.random() * 1) - 100
+        $(this).css({
+          "top": y + "px"
+        })
+      })
+    })
+  })
+</script>
+
+  </head>
+  <body>
+<div><p>H</p></div>
+<div><p>S</p></div>
+<div><p>E</p></div>
+<div><p>A</p></div>
+<div><p>R</p></div>
+<div><p>T</p></div>
+<div><p>&</p></div>
+<div><p>D</p></div>
+<div><p>E</p></div>
+<div><p>S</p></div>
+<div><p>I</p></div>
+<div><p>G</p></div>
+<div><p>N</p></div>
+<div><p>&</p></div>
+<div><p>C</p></div>
+<div><p>O</p></div>
+<div><p>D</p></div>
+<div><p>I</p></div>
+<div><p>N</p></div>
+<div><p>G</p></div>
+<div><p>Y</p></div>
+<div><p>O</p></div>
+<div><p>R</p></div>
+<div><p>A</p></div>
+<div><p>P</p></div>
+<div><p>!</p></div>
+
+  </body>
+</html>
